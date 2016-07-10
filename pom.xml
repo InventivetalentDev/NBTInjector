@@ -50,19 +50,12 @@
                         <configuration>
                             <artifactSet>
                                 <includes>
-                                    <include>org.mcstats.*</include>
                                     <include>org.inventivetalent:nbtinjector**</include>
                                     <include>org.inventivetalent:reflectionhelper**</include>
                                     <include>org.inventivetalent:nbt-lib**</include>
                                     <include>org.javassist:**</include>
                                 </includes>
                             </artifactSet>
-                            <relocations>
-                                <relocation>
-                                    <pattern>org.mcstats</pattern>
-                                    <shadedPattern>org.inventivetalent..mcstats</shadedPattern>
-                                </relocation>
-                            </relocations>
                         </configuration>
                     </execution>
                 </executions>
@@ -93,11 +86,6 @@
             <artifactId>craftbukkit</artifactId>
             <version>1.10-R0.1-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>org.mcstats.bukkit</groupId>
-            <artifactId>metrics-lite</artifactId>
-            <version>R8-SNAPSHOT</version>
-        </dependency>
 
         <dependency>
             <groupId>org.inventivetalent</groupId>
@@ -114,12 +102,6 @@
             <groupId>org.javassist</groupId>
             <artifactId>javassist</artifactId>
             <version>3.20.0-GA</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.inventivetalent.spiget-update</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>[1.0.1,)</version>
         </dependency>
     </dependencies>
 
@@ -139,18 +121,6 @@
         <repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
-        </repository>
-        <repository>
-            <id>sk89q-repo</id>
-            <url>http://maven.sk89q.com/artifactory/repo/</url>
-        </repository>
-        <repository>
-            <id>techcable-repo</id>
-            <url>http://repo.techcable.net/content/groups/public/</url>
-        </repository>
-        <repository>
-            <id>mcstats-repo</id>
-            <url>http://repo.mcstats.org/content/groups/public/</url>
         </repository>
     </repositories>
 </project>
