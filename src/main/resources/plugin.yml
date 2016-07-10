@@ -1,0 +1,6 @@
+name: NBTInjector
+main: org.inventivetalent.nbt.injector.NBTInjectorPlugin
+author: inventivetalent
+version: ${project.version}
+
+load: STARTUP
