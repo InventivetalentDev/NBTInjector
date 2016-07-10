@@ -1,6 +1,8 @@
 package org.inventivetalent.nbt.injector;
 
 import javassist.ClassPool;
+import org.bukkit.plugin.Plugin;
+import org.inventivetalent.apihelper.API;
 import org.inventivetalent.nbt.CompoundTag;
 import org.inventivetalent.reflection.minecraft.Minecraft;
 import org.inventivetalent.reflection.resolver.minecraft.NMSClassResolver;
@@ -11,7 +13,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.logging.Logger;
 
-public class NBTInjector {
+public class NBTInjector implements API {
 
 	static Logger           logger           = Logger.getLogger("NBTInjector");
 	static NMSClassResolver nmsClassResolver = new NMSClassResolver();
@@ -78,6 +80,19 @@ public class NBTInjector {
 		} catch (ReflectiveOperationException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	@Override
+	public void load() {
+		inject();
+	}
+
+	@Override
+	public void init(Plugin plugin) {
+	}
+
+	@Override
+	public void disable(Plugin plugin) {
 	}
 
 	static class Entity {

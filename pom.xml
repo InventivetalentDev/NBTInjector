@@ -6,7 +6,7 @@
 
     <groupId>org.inventivetalent</groupId>
     <artifactId>nbtinjector</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>NBTInjector</name>
 
     <build>
@@ -53,6 +53,7 @@
                                     <include>org.inventivetalent:nbtinjector**</include>
                                     <include>org.inventivetalent:reflectionhelper**</include>
                                     <include>org.inventivetalent:nbt-lib**</include>
+                                    <include>org.inventivetalent:apimanager**</include>
                                     <include>org.javassist:**</include>
                                 </includes>
                             </artifactSet>
@@ -85,6 +86,12 @@
             <groupId>org.bukkit</groupId>
             <artifactId>craftbukkit</artifactId>
             <version>1.10-R0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.inventivetalent</groupId>
+            <artifactId>apimanager</artifactId>
+            <version>1.0.2</version>
         </dependency>
 
         <dependency>
